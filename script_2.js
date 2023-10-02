@@ -291,133 +291,134 @@
 
 // 10-misol
 
-let month=+prompt("oyni kiriting");
-let k=0;
-let day=+prompt("kunni kiriting");
-alert("Eslatib o'tamiz bu dastur faqat kabisa bo'lmagan yil uchun keyingi sanani aniqlab beradi");
-if((month<=12 && month>=1) && (day<=31 && day>=1) ){
-    switch (month) {
-        case 1:
-            if(day!=31){
-                console.log(day+"-yanvardan  dan keyingi sana"+`${day+1} -yanvar`);
-            }
-            else{
-                console.log(day+"-yanvardan dan keyingi sana 1-fevral");
-            }           
-            break;
-        case 2:
-            if (day>28) {
-                console.log("fevralda bunday kun yo'q");
+// let month=+prompt("oyni kiriting");
+// let k=0;
+// let day=+prompt("kunni kiriting");
+// alert("Eslatib o'tamiz bu dastur faqat kabisa bo'lmagan yil uchun keyingi sanani aniqlab beradi");
+// if((month<=12 && month>=1) && (day<=31 && day>=1) ){
+//     switch (month) {
+//         case 1:
+//             if(day!=31){
+//                 console.log(day+"-yanvardan  dan keyingi sana"+`${day+1} -yanvar`);
+//             }
+//             else{
+//                 console.log(day+"-yanvardan dan keyingi sana 1-fevral");
+//             }           
+//             break;
+//         case 2:
+//             if (day>28) {
+//                 console.log("fevralda bunday kun yo'q");
                 
-            }
-            else if(day!=28){
-                console.log(day+"-fevraldan  dan keyingi sana"+`${day+1} -fevral`);
-            }
-            else{
-                console.log(day+"-fevraldan dan keyingi sana 1-mart");
-            }           
-            break;
-        case 3:
-            if(day!=31){
-                console.log(day+"-martdan  dan keyingi sana"+`${day+1} -mart`);
-            }
-            else{
-                console.log(day+"-martdan dan keyingi sana 1-aprel");
-            }           
-            break;
-        case 4:
-            if(day==31){
-                console.log("aprel oyida bunday kun yo'q");
-            }
-            else if(day!=30){
-                console.log(day+"-apreldan  dan keyingi sana"+`${day+1} -aprel`);
-            }
-            else{
-                console.log(day+"-apreldan dan keyingi sana 1-may");
-            }           
-            break;
-        case 5:
-            if(day!=31){
-                console.log(day+"-maydan  dan keyingi sana"+`${day+1} -may`);
-            }
-            else{
-                console.log(day+"-maydan dan keyingi sana 1-iyun");
-            }           
-            break;
+//             }
+//             else if(day!=28){
+//                 console.log(day+"-fevraldan  dan keyingi sana"+`${day+1} -fevral`);
+//             }
+//             else{
+//                 console.log(day+"-fevraldan dan keyingi sana 1-mart");
+//             }           
+//             break;
+//         case 3:
+//             if(day!=31){
+//                 console.log(day+"-martdan  dan keyingi sana"+`${day+1} -mart`);
+//             }
+//             else{
+//                 console.log(day+"-martdan dan keyingi sana 1-aprel");
+//             }           
+//             break;
+//         case 4:
+//             if(day==31){
+//                 console.log("aprel oyida bunday kun yo'q");
+//             }
+//             else if(day!=30){
+//                 console.log(day+"-apreldan  dan keyingi sana"+`${day+1} -aprel`);
+//             }
+//             else{
+//                 console.log(day+"-apreldan dan keyingi sana 1-may");
+//             }           
+//             break;
+//         case 5:
+//             if(day!=31){
+//                 console.log(day+"-maydan  dan keyingi sana"+`${day+1} -may`);
+//             }
+//             else{
+//                 console.log(day+"-maydan dan keyingi sana 1-iyun");
+//             }           
+//             break;
     
-        case 6:
-            if (day==31) {
-                console.log("iyun oyida bunday kun yo'q");
-            }
-            else if(day!=30){
-                console.log(day+"-maydan  dan keyingi sana "+`${day+1} -may`);
-            }
-            else{
-                console.log(day+"-maydan dan keyingi sana 1-iyun");
-            }           
-            break;
-        case 7:
-            if(day!=31){
-                console.log(day+"-iyuldan  dan keyingi sana"+`${day+1} -iyul`);
-            }
-            else{
-                console.log(day+"-iyul dan keyingi sana 1-avgust");
-            }           
-            break; 
-        case 8:
-            if(day!=31){
-                console.log(day+"-avgustdan  dan keyingi sana"+`${day+1} -avgust`);
-            }
-            else{
-                console.log(day+"-avgustdan dan keyingi sana 1-sentabr");
-            }           
-            break;
-        case 9:
-            if(day!=31){
-                console.log(day+"-sentabrdan  dan keyingi sana"+`${day+1} -sentabr`);
-            }
-            else{
-                console.log(day+"-sentabrdan dan keyingi sana 1-oktabr");
-            }           
-            break;
-        case 10:
-            if(day!=31){
-                console.log(day+"-oktabrdan  dan keyingi sana"+`${day+1} -oktabr`);
-            }
-            else{
-                console.log(day+"-oktabrdan dan keyingi sana 1-noyabr");
-            }           
-            break;
-        case 11:
-            if (day==31) {
-                    console.log("noyabr oyida bunday kun yo'q");
-                }
-            if(day!=30){
-                console.log(day+"-noyabrdan  dan keyingi sana"+`${day+1} -dekabr`);
-            }
-            else{
-                console.log(day+"-noyabrdan dan keyingi sana 1-dekabr");
-            }           
-            break;
-         case 12:
-                if(day!=31){
-                    console.log(day+"-dekabrdan  dan keyingi sana"+`${day+1} -dekabr`);
-                }
-                else{
-                    console.log(day+"-dekabrdan dan keyingi sana 1-yanvar");
-                }           
-                break;
+//         case 6:
+//             if (day==31) {
+//                 console.log("iyun oyida bunday kun yo'q");
+//             }
+//             else if(day!=30){
+//                 console.log(day+"-maydan  dan keyingi sana "+`${day+1} -may`);
+//             }
+//             else{
+//                 console.log(day+"-maydan dan keyingi sana 1-iyun");
+//             }           
+//             break;
+//         case 7:
+//             if(day!=31){
+//                 console.log(day+"-iyuldan  dan keyingi sana"+`${day+1} -iyul`);
+//             }
+//             else{
+//                 console.log(day+"-iyul dan keyingi sana 1-avgust");
+//             }           
+//             break; 
+//         case 8:
+//             if(day!=31){
+//                 console.log(day+"-avgustdan  dan keyingi sana"+`${day+1} -avgust`);
+//             }
+//             else{
+//                 console.log(day+"-avgustdan dan keyingi sana 1-sentabr");
+//             }           
+//             break;
+//         case 9:
+//             if(day!=31){
+//                 console.log(day+"-sentabrdan  dan keyingi sana"+`${day+1} -sentabr`);
+//             }
+//             else{
+//                 console.log(day+"-sentabrdan dan keyingi sana 1-oktabr");
+//             }           
+//             break;
+//         case 10:
+//             if(day!=31){
+//                 console.log(day+"-oktabrdan  dan keyingi sana"+`${day+1} -oktabr`);
+//             }
+//             else{
+//                 console.log(day+"-oktabrdan dan keyingi sana 1-noyabr");
+//             }           
+//             break;
+//         case 11:
+//             if (day==31) {
+//                     console.log("noyabr oyida bunday kun yo'q");
+//                 }
+//             if(day!=30){
+//                 console.log(day+"-noyabrdan  dan keyingi sana"+`${day+1} -dekabr`);
+//             }
+//             else{
+//                 console.log(day+"-noyabrdan dan keyingi sana 1-dekabr");
+//             }           
+//             break;
+//          case 12:
+//                 if(day!=31){
+//                     console.log(day+"-dekabrdan  dan keyingi sana"+`${day+1} -dekabr`);
+//                 }
+//                 else{
+//                     console.log(day+"-dekabrdan dan keyingi sana 1-yanvar");
+//                 }           
+//                 break;
             
-        default:
-            break;
-    }
+//         default:
+//             break;
+//     }
 
-}
-else{
-    console.log("sanani to'g'ri kiriting");
-}
+// }
+// else{
+//     console.log("sanani to'g'ri kiriting");
+// }
 
 ////////////////////////////////////////////////////////////////-----------BELGILAR-----------------///////////////////////////////------------ISHLANADI
-
-
+k="aSDFGHJK";
+let t=k.charCodeAt(0);
+console.log(t);
 

@@ -211,153 +211,166 @@
 
 
 // javob = ["c", "b", "b", "c"];
-// test = [
-//   {
-//     savol: "O'zbekistonda mustaqillik bayrami qaysi sanada nishonlanadi?",
-//     varianta: "1-avgust",
-//     variantb: "31-avgust",
-//     variantc: "1-sentabr",
-//     variantd: "2-sentabr",
-//   },
-//   {
-//     savol: "'algoritm' atamasi kim tomonidan fanga kiritilgan? ",
-//     varianta: "Beruniy",
-//     variantb: "Xorazmiy",
-//     variantc: "Farobiy",
-//     variantd: "Ibn Sino",
-//   },
-//   {
-//     savol: "'Kichkina Shahzoda' asari muallifi kim?",
-//     varianta: "Aka uka Grimmlar",
-//     variantb: "Ekzyuperi",
-//     variantc: "Paelo Kaelo",
-//     variantc: "Rey Bredberi",
-//   },
-//   {
-//     savol: "'Raqmli qa'la' asari muallifi kim? ",
-//     varianta: "Mitch Elbom",
-//     variantb: "Markus Zusak",
-//     variantc: "Den Braun",
-//     variantd: "Rey Bredberi",
-//   },
-// ];
-// loopgeneral=true;
-// while (loopgeneral) {
-//   who = prompt(
-//     "siz kimsiz? \n1-------abiturient\n2-------o'qituvchi\n0--------chiqish"
-//   );
-//   summa = 0;
+test = [
+  {
+    savol: "O'zbekistonda mustaqillik bayrami qaysi sanada nishonlanadi?",
+    varianta: "1-avgust",
+    variantb: "31-avgust",
+    variantc: "1-sentabr",
+    variantd: "2-sentabr",
+    javobs : "1-sentabr",
+  },
+  {
+    savol: "'algoritm' atamasi kim tomonidan fanga kiritilgan? ",
+    varianta: "Beruniy",
+    variantb: "Xorazmiy",
+    variantc: "Farobiy",
+    variantd: "Ibn Sino",
+  },
+  {
+    savol: "'Kichkina Shahzoda' asari muallifi kim?",
+    varianta: "Aka uka Grimmlar",
+    variantb: "Ekzyuperi",
+    variantc: "Paelo Kaelo",
+    variantd: "Rey Bredberi",
+  },
+  {
+    savol: "'Raqmli qa'la' asari muallifi kim? ",
+    varianta: "Mitch Elbom",
+    variantb: "Markus Zusak",
+    variantc: "Den Braun",
+    variantd: "Rey Bredberi",
+  },
+];
+loopgeneral=true;
+while (loopgeneral) {
+  who = prompt(
+    "siz kimsiz? \n1-------abiturient\n2-------o'qituvchi\n0----------chiqish"
+  );
+  summa = 0;
 
-//   if (who == 1) {
-//     let now = new Date();
-
-//     for (let i = 0; i <test.length; i++) {
-//       t = `${JSON.stringify(test[i].savol)}\na) ${JSON.stringify(
-//         test[i].varianta
-//       )}\nb) ${JSON.stringify(test[i].variantb)}\nc) ${JSON.stringify(
-//         test[i].variantc
-//       )}\nd) ${JSON.stringify(test[i].variantd)}`;
-//       d = prompt(t);
-//       if (d == "quit") {
-//         i = test.length-1;
-//       }
-//       if (javob[i] == d[0].toLowerCase()) {
-//         summa = summa + 1;
-//       }
-//     }
-//     if (summa != 0 && summa != test.length) {
-//       console.log(
-//         `Sizga berilgan ${test.length} savolning ${summa}tasiga javob berdingiz `
-//       );
-//       console.log(
-//         `Sizga berilgan ${test.length} ta savoldan ${
-//           test.length - summa
-//         } savolga javob topa olmadingiz `
-//       );
-//     }
-//     if (summa == test.length) {
-//       console.log("Tabriklaymiz siz barcha savolga to'g'ri javob berdingiz!!!");
-//     }
-//     if (summa == 0) {
-//       console.log(
-//         "Afsuski siz hech qaysi savolga javob topa olmadingiz. Tushkunlikka tushmang hali hayot oldinda"
-//       );
-//     }
-//     let now1 = new Date();
-
-//     alert(`test davomiyligi  ${(now1-now)/1000} sekund` );
-//   }
-//   if (who == 2) {
-//     loop1=1;
-//     loop12=true;
-//     while(loop12){
-//         parol = prompt("parolni kiriting");
-//         if(loop1==3){
-//             loopgeneral=false;
-//             break
-//         }
-//         if (parol == "men") {
-//         s = 0;
-//         loop = true;
-//         while (loop) {
-//             savol1 = prompt("savolni kiriting");
-//             var1 = prompt("1-variant kiriting");
-//             var2 = prompt("2-variantni kiriring");
-//             var3 = prompt("3-variantni kiriting");
-//             var4 = prompt("4-variantni kiriting");
-//             question = prompt(
-//             `Siz tuzgan savol ${savol1}\na)${var1}\nb)${var2}\nc)${var3}\nd)${var4}\nendi to'gri javobni belgilang`
-//             );
-//             test.push({
-//             savol: savol1,
-//             varianta: var1,
-//             variantb: var2,
-//             variantc: var3,
-//             variantd: var4,
-//             });
-//             javob.push(question[0]);
-//             you = prompt(
-//             "yana savol kiritmoqchimisiz?\n1--------ha\n0-------yo'q"
-//             );
-//             if (you == 0) {
-//             loop = false;
-           
-//             }
-//         }
-//         tahrir=true;
-//         while(tahrir){
-//             edit=prompt(`Siz birorta savolga o'zgartirish kiritmoqchimisiz?\nha--------1\nyo'q------0`);
-//             if(edit==0){
-//                 tahrir=false;
-//             }
-//             tahrir1="";
-//             if(edit==1){
-//                 for(let k=0; k<test.length; k++){
-//                    tahrir1=`${JSON.stringify(tahrir1)}\n+${JSON.stringify(test[k])}`;
-//                 }
-//                 console.log(tahrir1);
-//             }
-//         }
-//         loop12=false;
-//         } 
-//         if(parol!="men" && loop1!=3){
-//             alert(`Parolni xato kiritdingiz Bu sizning ${loop1}-urinishingiz. ogohlantiramiz parolni 3 marta xato kiritsangiz dasturdan chiqib ketasiz`)
-//         }  
-//         loop1=loop1+1;   
-//     }
-//   }
-//   if(who==0){
-//     break;
-//   }
-// }
-
-function edit(a){
-    a=[
-        {kalit: "value"},
-        {aql: "idrok"}
-    ]
-    for(let i=0; i<=1; i++){
-        prompt(a[i]);
+  if (who == 1) {
+    let now = new Date();
+    llll="";
+    r=Math.floor(Math.random()*test.length);
+    r1=Math.floor(Math.random()*(5-1)+1);
+    for (let i = 0; i <test.length; i++) {
+      
+      savol1=test.at(r-i);
+      
+      for(let ab=0; ab<1; i++){
+        // varianta==
+        t=`${savol1.savol}\n${savol1[r1]}\n${savol1.at(r1)}\n${savol1.at(r1)}\n${savol1.at(r1)}`
+         prompt(t)
+      }
+      // for(let at=1; at<4; at++)
+      // t = `${JSON.stringify(test.at(i-r).savol)}\na) ${JSON.stringify(
+      //   test.at(i-r).varianta
+      // )}\nb) ${JSON.stringify(test.at(i-r).variantb)}\nc) ${JSON.stringify(
+      //   test.at(i-r).variantc
+      // )}\nd) ${JSON.stringify(test.at(i-r).variantd)}`;
+      // d = prompt(t);
+      // console.log(savol1);
+      if (d == "quit") {
+        i = test.length-1;
+      }
+      if (javob[i] == d[0].toLowerCase()) {
+        summa = summa + 1;
+       }
     }
+    if (summa != 0 && summa != test.length) {
+      console.log(
+        `Sizga berilgan ${test.length} savolning ${summa}tasiga javob berdingiz `
+      );
+      console.log(
+        `Sizga berilgan ${test.length} ta savoldan ${
+          test.length - summa
+        } savolga javob topa olmadingiz `
+      );
+    }
+    if (summa == test.length) {
+      console.log("Tabriklaymiz siz barcha savolga to'g'ri javob berdingiz!!!");
+    }
+    if (summa == 0) {
+      console.log(
+        "Afsuski siz hech qaysi savolga javob topa olmadingiz. Tushkunlikka tushmang hali hayot oldinda"
+      );
+    }
+    let now1 = new Date();
+
+    alert(`test davomiyligi  ${(now1-now)/1000} sekund` );
+  }
+  // if (who == 2) {
+  //   loop1=1;
+  //   loop12=true;
+  //   while(loop12){
+  //       parol = prompt("Parolni kiriting");
+  //       if(loop1==3){
+  //           loopgeneral=false;
+  //           break
+  //       }
+  //       if (parol == "men") {
+  //       s = 0;
+  //       loop = true;
+  //       while (loop) {
+  //           savol1 = prompt("savolni kiriting");
+  //           var1 = prompt("1-variant kiriting");
+  //           var2 = prompt("2-variantni kiriring");
+  //           var3 = prompt("3-variantni kiriting");
+  //           var4 = prompt("4-variantni kiriting");
+  //           question = prompt(
+  //           `Siz tuzgan savol ${savol1}\na)${var1}\nb)${var2}\nc)${var3}\nd)${var4}\nendi to'gri javobni belgilang`
+  //           );
+  //           test.push({
+  //           savol: savol1,
+  //           varianta: var1,
+  //           variantb: var2,
+  //           variantc: var3,
+  //           variantd: var4,
+  //           });
+  //           javob.push(question[0]);
+  //           you = prompt(
+  //           "yana savol kiritmoqchimisiz?\n1---------ha\n0-------yo'q"
+  //           );
+  //           if (you == 0) {
+  //           loop = false;
+           
+  //           }
+  //       }
+  //       tahrir=true;
+  //       while(tahrir){
+  //           edit=prompt(`Siz birorta savolga o'zgartirish kiritmoqchimisiz?\nha--------1\nyo'q------0`);
+  //           if(edit==0){
+  //               tahrir=false;
+  //           }
+  //           tahrir1="";
+  //           if(edit==1){
+  //               for(let k=0; k<test.length; k++){
+  //                  tahrir1=(test[k]);
+  //               }
+  //               console.log(tahrir1);
+  //           }
+  //       }
+  //       loop12=false;
+  //       } 
+  //       if(parol!="men" && loop1!=3){
+  //           alert(`Parolni xato kiritdingiz Bu sizning ${loop1}-urinishingiz. ogohlantiramiz parolni 3 marta xato kiritsangiz dasturdan chiqib ketasiz`)
+  //       }  
+  //       loop1=loop1+1;   
+  //   }
+  // }
+  if(who==0){
+    break;
+  }
 }
-edit()
+
+// function edit(a){
+//     a=[
+//         {kalit: "value"},
+//         {aql: "idrok"}
+//     ]
+//     for(let i=0; i<=1; i++){
+//         prompt(a[i]);
+//     }
+// }
+// edit()
