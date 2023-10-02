@@ -140,7 +140,7 @@ test = [
 loopgeneral = true;
 while (loopgeneral) {
   who = prompt(
-    "SIZ KIMSIZ?\n1---------ABITURIENT\n2---------O'QITUVCHI\n0------------chiqish"
+    "SIZ KIMSIZ?\n1---------ABITURIENT\n2---------O'QITUVCHI\n0-------------CHIQISH"
   );
   t = 0;
   switch (who) {
@@ -214,7 +214,8 @@ while (loopgeneral) {
               if (answer1[0].toLowerCase() == "d") {
                 new_question.answer = d1;
                 loop2 = false;
-              } else {
+              } 
+              else {
                 alert(
                   "variant javoblari faqat 'a' , 'b' , 'c', 'd' lardan bittasi bo'lishi kerak. Iltimos variantni to'g'ri kiriting"
                 );
@@ -248,5 +249,7 @@ while (loopgeneral) {
     case "0":
       loopgeneral = false;
       break;
+    default:
+      alert("QIYMATNI QAYTADAN KIRITING");
   }
 }
