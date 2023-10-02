@@ -176,7 +176,7 @@ while (loopgeneral) {
       parollar_soni = 0;
       while (parolloop) {
         parol = prompt("PAROLNI KIRITING");
-        if (parol == "men") {
+        if (parol == "abcd") {
           yangi_savol=true;
           while(yangi_savol){
           savol_kiritish = prompt(
